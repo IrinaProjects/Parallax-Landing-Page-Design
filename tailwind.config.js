@@ -8,6 +8,11 @@ module.exports = {
         muted: "#C9CBCF",
         accent: "#07693A",
       },
+      dropShadow: {
+        "text-sm": "1px 1px 5px rgba(0, 0, 0, 0.90)",
+        "text-md": "1px 2px 5px rgba(0, 0, 0, 0.90)",
+        "text-lg": "1px 4px 5px rgba(0, 0, 0, 0.90)",
+      },
       container: {
         center: true,
         padding: {
