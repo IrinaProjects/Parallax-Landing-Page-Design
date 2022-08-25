@@ -14,7 +14,9 @@
     rel="stylesheet">
 </head>
 
-<body class="bg-bkg text-white selection:bg-accent selection:tex-bkg ">
+<!-- <body class="bg-bkg text-white text-base selection:bg-accent selection:tex-bkg "> -->
+  <body class="bg-bkg text-white selection:bg-accent selection:tex-bkg ">
+
   <div class="parallax">
 
     <!-- NAV -->
@@ -40,6 +42,10 @@
 
     <!-- HEADER -->
     <header class="min-h-screen flex flex-col justify-evenly items-center relative">
+     
+      <!-- <div class="absolute bg-gradient-to-b inset-0 bottom-3/4 from-bkg to-transparent"></div>
+      <div class="absolute bg-gradient-to-t inset-0 top-1/3 -bottom-32 from-bkg/80 to-transparent"></div>
+      -->
       <img sizes="(min-width:500px) 480w, 650w, 800w, 1300w"
         srcset="./images/hero-xs.png 480w, ./images/hero-sm.png 650w, ./images/hero-md.png 800w, ./images/hero-lg.png 1300w,"
         class="absolute h-full w-full -z-20 object-cover object-center" 
@@ -56,6 +62,7 @@
     </header>
 
     <main class="relative mt-16 sm:mt-24 lg:mt-40 pb-16 -mb-16 grid gap-16 sm:gap-24 lg:gap-40 overflow-hidden">
+     
       <section aria-labelledby="headline" class="container grid gap-8 text-center max-w-3xl">
         <div>
           <small class="tracking-widest text-base text-gray-400 font-bold uppercase drop-shadow-text-md">How can we help you?</small>
@@ -63,6 +70,68 @@
         </div>
         <p class="text-muted drop-shadow-text-sm">When you hire our gardening services you will have the benefits of the most professional gardeners, in your own neighborhood. At BestGarden, we provide lawn mowing services and other gardening services on same day.</p>
       </section>
+
+      <section aria-labelledby="slider" class="container grid gap-8 text-center sm:text-left">
+        <div class="relative">
+        <div class="hidden sm:block absolute w-14 bg-accent/20 -left-4 h-full"></div> 
+        <!-- <div class="hidden sm:block absolute w-12 bg-accent/50 left-20 h-full"></div>  --> 
+        <div>
+          <small class="tracking-widest text-base text-gray-400 font-bold uppercase drop-shadow-text-md">We make your garden look beautiful!</small>
+          <h2 id="slider" class="text-3xl font-bold tracking-wide drop-shadow-text-md">Garden Landscaping</h2>
+        </div>
+        <div class="flex flex-wrap sm:flex-nowrap justify-center sm:justify-between items-center space-x-4 space-y-4">
+        <p class="text-muted max-w-3xl drop-shadow-text-sm">We have a team of garden designers, arborists and landscape architects who help design the yard of your dreams!</p>
+        <div class="flex space-x-4">
+          <button data-slideBtn id="prev" aria-label="show previous image" class="grid place-items-center bg-accent hover:bg-accent/90 rounded-full p-2 text-white focus:outline-none focus-visible:ring-4 ring-offset-2 ring-offset-white ring-accent disabled:bg-accent/20 disabled:text-accent" disabled>
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" class="pointer-events-none" fill="currentColor" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><circle cx="128" cy="128" r="96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></circle><polyline points="121.9 161.9 88 128 121.9 94.1" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></polyline><line x1="168" y1="128" x2="88" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line></svg>
+          </button>
+          <button data-slideBtn id="next" aria-label="show next image" class="grid place-items-center bg-accent hover:bg-accent/90 rounded-full p-2 text-white focus:outline-none focus-visible:ring-4 ring-offset-2 ring-offset-white ring-accent disabled:bg-accent/20 disabled:text-accent">
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" class="pointer-events-none" fill="currentColor" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><circle cx="128" cy="128" r="96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></circle><polyline points="134.1 161.9 168 128 134.1 94.1" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></polyline><line x1="88" y1="128" x2="168" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line></svg>
+          </button>
+        </div>
+        </div>
+      </div>
+      </section>
+
+      <!-- Gallery -->
+      <div class="-mt-10 sm:-mt-20 lg:-mt-36 container xs:w-screen">
+        <div class="flex transition-transform duration-500" data-slideContainer>
+          <div class="relative w-full xs:w-auto flex-grow flex-shrink-0 xs:basis-80 pr-4" data-slide>
+            <img class="object-cover h-full [@media(hover:hover)]:grayscale hover:grayscale-0 transition-all peer" src="./images/slider-1.jpg" alt="Cottage Love">
+            <p class="absolute bottom-4 left-4 px-4 py-2 rounded-lg bg-bkg font-bold text-lg pointer-events-none tracking-wide [@media(hover:hover)]:opacity-0 peer-hover:opacity-100 transition-opacity">Cottage Love</p>
+          </div>
+          <div class="relative w-full xs:w-auto flex-grow flex-shrink-0 xs:basis-80 pr-4" data-slide>
+            <img class="object-cover h-full [@media(hover:hover)]:grayscale hover:grayscale-0 transition-all peer" src="./images/slider-2.jpg" alt="Cottage Rest">
+            <p class="absolute bottom-4 left-4 px-4 py-2 rounded-lg bg-bkg font-bold text-lg pointer-events-none tracking-wide [@media(hover:hover)]:opacity-0 peer-hover:opacity-100 transition-opacity">Cottage Rest</p>
+          </div>
+          <div class="relative w-full xs:w-auto flex-grow flex-shrink-0 xs:basis-80 pr-4" data-slide>
+            <img class="object-cover h-full [@media(hover:hover)]:grayscale hover:grayscale-0 transition-all peer" src="./images/slider-3.jpg" alt="Cottage Grow">
+            <p class="absolute bottom-4 left-4 px-4 py-2 rounded-lg bg-bkg font-bold text-lg pointer-events-none tracking-wide [@media(hover:hover)]:opacity-0 peer-hover:opacity-100 transition-opacity">Cottage Grow</p>
+          </div>
+          <div class="relative w-full xs:w-auto flex-grow flex-shrink-0 xs:basis-80 pr-4" data-slide>
+            <img class="object-cover h-full [@media(hover:hover)]:grayscale hover:grayscale-0 transition-all peer" src="./images/slider-4.jpg" alt="Cottage Peaks">
+            <p class="absolute bottom-4 left-4 px-4 py-2 rounded-lg bg-bkg font-bold text-lg pointer-events-none tracking-wide [@media(hover:hover)]:opacity-0 peer-hover:opacity-100 transition-opacity">Cottage Peaks</p>
+          </div>
+          <div class="relative w-full xs:w-auto flex-grow flex-shrink-0 xs:basis-80 pr-4" data-slide>
+            <img class="object-cover h-full [@media(hover:hover)]:grayscale hover:grayscale-0 transition-all peer" src="./images/slider-5.jpg" alt="Cottage Inlet">
+            <p class="absolute bottom-4 left-4 px-4 py-2 rounded-lg bg-bkg font-bold text-lg pointer-events-none tracking-wide [@media(hover:hover)]:opacity-0 peer-hover:opacity-100 transition-opacity">Cottage Inlet</p>
+          </div>
+          <div class="relative w-full xs:w-auto flex-grow flex-shrink-0 xs:basis-80 pr-4" data-slide>
+            <img class="object-cover h-full [@media(hover:hover)]:grayscale hover:grayscale-0 transition-all peer" src="./images/slider-6.jpg" alt="Cottage Cliffs">
+            <p class="absolute bottom-4 left-4 px-4 py-2 rounded-lg bg-bkg font-bold text-lg pointer-events-none tracking-wide [@media(hover:hover)]:opacity-0 peer-hover:opacity-100 transition-opacity">Cottage Cliffs</p>
+          </div>
+          <div class="relative w-full xs:w-auto flex-grow flex-shrink-0 xs:basis-80 pr-4" data-slide>
+            <img class="object-cover h-full [@media(hover:hover)]:grayscale hover:grayscale-0 transition-all peer" src="./images/slider-7.jpg" alt="Cottage Sound">
+            <p class="absolute bottom-4 left-4 px-4 py-2 rounded-lg bg-bkg font-bold text-lg pointer-events-none tracking-wide [@media(hover:hover)]:opacity-0 peer-hover:opacity-100 transition-opacity">Cottage Sound</p>
+          </div>
+          <div class="relative w-full xs:w-auto flex-grow flex-shrink-0 xs:basis-80 pr-4" data-slide>
+            <img class="object-cover h-full [@media(hover:hover)]:grayscale hover:grayscale-0 transition-all peer" src="./images/slider-8.jpg" alt="Cottage Meadows">
+            <p class="absolute bottom-4 left-4 px-4 py-2 rounded-lg bg-bkg font-bold text-lg pointer-events-none tracking-wide [@media(hover:hover)]:opacity-0 peer-hover:opacity-100 transition-opacity">Cottage Meadows</p>
+          </div>
+        </div>
+        </div>
+      <!--End of Gallery -->
+
     </main>
 
   </div>
