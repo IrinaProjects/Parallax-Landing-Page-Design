@@ -39,7 +39,7 @@ slideContainer.addEventListener('transitionend', () => isMoving = false);
 // disable image drag events
 document.querySelectorAll('[data-slide] img').forEach(img => img.ondragstart = () => false);
 
-// intersection observer for slider
+// intersection observer for slider, stops slider after last image
 const slideObserver = new IntersectionObserver((slide) => {
   if(slide[0].isIntersecting){
     addDisabledAttribute([slideBtns[1]]);
